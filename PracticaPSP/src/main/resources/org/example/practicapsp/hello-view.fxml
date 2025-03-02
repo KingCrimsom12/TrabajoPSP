@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.practicapsp.controllers.GmailController">
+  <children>
+    <VBox spacing="10" alignment="CENTER" prefWidth="500" prefHeight="600">
+      <!-- Sección de Inicio de Sesión -->
+      <Label text="Inicio de Sesión en Gmail" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+      <TextField fx:id="emailField" promptText="Correo electrónico" prefWidth="300" />
+      <PasswordField fx:id="passwordField" promptText="Contraseña" prefWidth="300" />
+      <Button fx:id="loginButton" text="Iniciar Sesión" onAction="#administrarLogin" />
+      <Label fx:id="statusLabel" text="" style="-fx-text-fill: red;" />
+
+      <!-- Tabla para mostrar correos con etiquetas -->
+      <TableView fx:id="emailTable" prefHeight="350" prefWidth="480">
+        <columns>
+          <TableColumn text="Asunto" fx:id="subjectColumn" prefWidth="320" />
+          <TableColumn text="Etiquetas" fx:id="labelsColumn" prefWidth="160" />
+        </columns>
+      </TableView>
+    </VBox>
+  </children>
+</AnchorPane>
+
